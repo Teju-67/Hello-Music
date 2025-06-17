@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dedicate a Song</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #1e1e1e;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      color: #ffcccb;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    form {
+      background-color: #2c2c2c;
+      padding: 20px;
+      border-radius: 15px;
+      width: 100%;
+      max-width: 400px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+    }
+
+    button {
+      background-color: #1db954;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #17a74a;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎁 Dedicate a Song</h1>
+
+  <form onsubmit="submitDedication(event)">
+    <label for="from">From:</label>
+    <input type="text" id="from" name="from" required>
+
+    <label for="to">To:</label>
+    <input type="text" id="to" name="to" required>
+
+    <label for="song">Song Name:</label>
+    <input type="text" id="song" name="song" required>
+
+    <label for="message">Message (optional):</label>
+    <textarea id="message" name="message" rows="4"></textarea>
+
+    <button type="submit">Send Dedication</button>
+  </form>
+
+  <script>
+    function submitDedication(event) {
+      event.preventDefault();
+      const from = document.getElementById('from').value;
+      const to = document.getElementById('to').value;
+      const song = document.getElementById('song').value;
+      const message = document.getElementById('message').value;
+
+      alert(`🎶 Your song "${song}" has been dedicated to ${to} from ${from}!`);
+    }
+  </script>
+
+</body>
+</html>

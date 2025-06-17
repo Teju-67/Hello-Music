@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hello Music</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Brush Script MT', cursive;
+      background-color: #121212;
+      color: white;
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 30px 50px;
+      background: url('m1.jpg') no-repeat center center/cover;
+      height: 100vh;
+      position: relative;
+    }
+
+    .header {
+      font-size: 3.2rem;
+      text-shadow: 2px 2px 5px black;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 15px;
+    }
+
+    .recommend-btn, .premium-btn, .login-btn {
+      background-color: #ff4081;
+      border: none;
+      color: white;
+      padding: 12px 22px;
+      border-radius: 25px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      font-family: Arial, sans-serif;
+    }
+
+    .recommend-btn:hover,
+    .premium-btn:hover,
+    .login-btn:hover {
+      background-color: #e73370;
+    }
+
+   .quote-text {
+  position: absolute;
+  top: 35%;              
+  right: 100px;          
+  transform: translateY(-50%);
+  font-size: 3.2rem;    
+  color: #ffffff;
+  font-family: 'Brush Script MT', cursive;
+  text-shadow: 2px 2px 5px black;
+  text-align: right;
+  line-height: 1.6;
+}
+
+
+
+
+    section {
+      padding: 80px 40px 0;
+    }
+
+    #recommend, #premium, #login {
+      background-color: #1e1e1e;
+    }
+
+    h2 {
+      color: #1db954;
+    }
+
+    .price-box {
+      background-color: white;
+      color: black;
+      padding: 12px;
+      text-align: center;
+      font-weight: bold;
+      border-radius: 10px;
+      margin-top: 15px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .price-box:hover {
+      background-color: #e0e0e0;
+    }
+
+    .note {
+      font-size: 0.8rem;
+      margin-top: 10px;
+      color: #ccc;
+    }
+
+    .login-modal-content input {
+      width: 100%;
+      padding: 12px;
+      border-radius: 10px;
+      border: none;
+      margin: 10px 0;
+      font-size: 1rem;
+    }
+
+    .login-modal-content .login-button {
+      background-color: white;
+      color: #a14084;
+      padding: 10px;
+      width: 100%;
+      border: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+      border-radius: 20px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .social-icons img {
+      width: 40px;
+      margin: 10px;
+      cursor: pointer;
+    }
+
+    .signup-text {
+      margin-top: 10px;
+      font-size: 0.9rem;
+    }
+
+    .signup-text a {
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .dedicate-link {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 10px 20px;
+      background-color: #1db954;
+      color: white;
+      border-radius: 20px;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+
+    .dedicate-link:hover {
+      background-color: #17a74a;
+    }
+
+    #recommend {
+      background: url('r1.jpg') no-repeat center center/cover;
+      padding: 80px 40px 0;
+      color: white;
+    }
+
+    #premium {
+      background: url('p1.jpg') no-repeat center center/cover;
+      padding-top: 40px;
+      color: white;
+    }
+
+    #login {
+      background: url('l1.jpg') no-repeat center center/cover;
+      padding-top: 60px;
+      color: white;
+    }
+
+    .premium-overlay {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 30px;
+      border-radius: 15px;
+      max-width: 600px;
+      margin-left: 40px;
+      margin-right: auto;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    #premium ul {
+      margin-top: 15px;
+      padding-left: 20px;
+    }
+
+    #premium ul li {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-bar">
+    <div class="header"> Hello Music 🎶</div>
+    <div class="btn-group">
+      <button onclick="document.getElementById('recommend').scrollIntoView()" class="recommend-btn">Recommend</button>
+      <button onclick="document.getElementById('premium').scrollIntoView()" class="premium-btn">Premium</button>
+      <button onclick="document.getElementById('login').scrollIntoView()" class="login-btn">Login</button>
+    </div>
+    <div class="quote-text">
+      🎤 sing & dance<br>
+      &nbsp;with<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;me...guys
+    </div>
+  </div>
+
+  <section id="recommend">
+    <h2 style="text-align:center;">🎧 Recommended Songs</h2>
+    <iframe src="recommend.html" width="100%" height="800px" style="border:none;"></iframe>
+    <div style="text-align:center;">
+      <a href="dedicate.html" target="_blank" class="dedicate-link">🎁 Dedicate a Song</a>
+    </div>
+  </section>
+
+  <section id="premium">
+    <div class="premium-overlay">
+      <h2>Spotify Premium</h2>
+      <p>Listen without limits. Try 3 months of Premium Individual for ₹59 with Spotify.</p>
+      <div class="price-box" onclick="alert('Premium plan activated! (demo only)')">
+        Try 3 months for ₹59
+      </div>
+      <p class="note">₹59 for 3 months, then ₹119/month. Offer for new users only via Spotify. Ends July 2, 2025.</p>
+      <ul>
+        <li>Ad-free music listening</li>
+        <li>Download to listen offline</li>
+        <li>Play songs in any order</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="login">
+    <div class="login-modal-content" style="max-width: 400px; margin: auto;">
+      <h2>Hey,<br>Welcome </h2>
+      <input type="text" placeholder="Email or Username">
+      <input type="password" placeholder="Password">
+      <p style="text-align:right; font-size: 0.8rem;">Forget Password?</p>
+      <button class="login-button">LOGIN →</button>
+      <p>Or continue with</p>
+      <div class="social-icons">
+        <img src="g.jpg" alt="Google">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="Facebook">
+      </div>
+      <div class="signup-text">
+        Don't have an account? <a href="#">SIGN UP</a>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
